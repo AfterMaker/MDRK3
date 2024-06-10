@@ -2,18 +2,10 @@ import { StyleSheet } from "react-native";
 
 import EditScreenInfo from "@/components/EditScreenInfo";
 import { Text, View } from "@/components/Themed";
-import { useState } from "react";
-import { Modal } from "react-native";
-import { Button } from "react-native";
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
+    <View style={{ flex: 1 }}>
       <EditScreenInfo path="app/(tabs)/index.tsx" />
     </View>
   );
@@ -30,9 +22,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   separator: {
-    marginVertical: 30,
+    marginVertical: 20,
     height: 1,
-    width: "80%",
+    width: "50%",
   },
   modalContainer: {
     alignItems: "center",

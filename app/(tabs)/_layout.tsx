@@ -3,6 +3,7 @@ import { Image } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
+import * as Font from "expo-font";
 
 import Colors from "@/constants/Colors";
 import { useColorScheme } from "@/components/useColorScheme";
@@ -12,6 +13,11 @@ const BusImage = require("@/assets/images/iconsNavigate/buslight.png");
 const CameraImage = require("@/assets/images/iconsNavigate/camerasecuritylight.png");
 const TempImage = require("@/assets/images/iconsNavigate/temperaturelight.png");
 const RadioImage = require("@/assets/images/iconsNavigate/heatlight.png");
+
+const fonts = () =>
+  Font.loadAsync({
+    "mt-medium": require("@/assets/fonts/Montserrat-Medium.ttf"),
+  });
 
 const TabBarIcon = ({ color, source }) => (
   <Image
